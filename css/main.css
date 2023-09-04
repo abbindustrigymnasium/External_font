@@ -1,0 +1,224 @@
+html {
+    font-size: 150%;
+}
+
+/* External font */
+@font-face {
+    font-family: 'MarisoleCondensed';
+    src: url(fonts/MarisoleCondensed/Marisole.ttf);
+    /* Fonten kändes passande för rubrikerna. Lite halvgalen och vild. */
+}
+
+header h1 {
+    background-color: white;
+    transform: scaleX(1.15);
+    padding: 5px;
+    margin: 50px;
+}
+
+#container header {
+    display: flex;
+    background-image: url(../css/images/white_logo_icon_containing_surfing_board_sand_beach.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: center top;
+    padding: 1.2rem;
+}
+
+/* Flex container */
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+img {
+    border: 2px solid black;
+}
+
+/* Viewport bredd upp till 720px */
+@media screen and (max-width: 720px) {
+    article {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        max-width: 67%;
+        margin: 0 auto;
+        height: auto;
+    }
+}
+
+/* Viewport bredd över 720px */
+@media screen and (min-width: 721px) {
+    article {
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        max-width: 100%;
+        margin: 0 auto;
+        height: auto;
+    }
+}
+
+div>header {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    align-items: center;
+    height: 10rem;
+    padding-bottom: 0rem;
+}
+
+/* Body */
+body {
+    font-size: 100%;
+    color: #121212;
+    font-family: Georgia, Arial, Garamond;
+    /* Georgia i första hand, sedan följer alternativen. */
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.05;
+
+    background: rgb(46, 140, 255);
+    background: -moz-linear-gradient(270deg, rgba(46, 140, 255, 1) 0%, rgba(175, 210, 253, 1) 5%, rgba(255, 255, 255, 1) 100%);
+    background: -webkit-linear-gradient(270deg, rgba(46, 140, 255, 1) 0%, rgba(175, 210, 253, 1) 5%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(270deg, rgba(46, 140, 255, 1) 0%, rgba(175, 210, 253, 1) 5%, rgba(255, 255, 255, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2e8cff", endColorstr="#ffffff", GradientType=1);
+
+    /* Först valdes en ljusblå färg som gav bra kontrast med nära svart font.
+    https://color.adobe.com/sv/create/color-contrast-analyzer
+    textfärg #121212 (nära svart)
+    bakgrundsfärg #AFD2FD (ljusblå, kontrastförhållande 12:1)
+
+    Sedan letade jag upp några komplementära färger.
+    https://color.adobe.com/sv/create/color-wheel
+    Komplementär (val på Adobes sida)
+    ljusblå #AFD2FD
+    mellanblå #2E8CFF
+    mörkblå #1271E6
+    brun #996300
+    brunorange #E69B12
+
+    Slutligen skapades en gradient som går från vit till vänster, via ljusblå, till mellanblå till höger. (100-5-0, 270 grader)
+    https://cssgradient.io */
+
+    margin: 2em auto;
+    padding: 4em;
+    border: 1px solid #121212;
+    /* brunorange ram */
+}
+
+/* URLs */
+a {
+    color: #996300;
+    /* bruna länkar */
+    text-decoration: underline;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'MarisoleCondensed', Garamond, Arial;
+    /* Den externa fonten MarisoleCondensed i första hand, följt av alternativen. */
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+
+}
+
+header p {
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 3rem;
+    line-height: 1.05;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/* Paragraphs */
+p {
+    text-align: left;
+}
+
+img {
+    display: block;
+}
+
+/* Table */
+table {
+    width: 100%;
+    max-width: 60rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+th {
+    color: #996300;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    padding: 0 2rem 0rem 1rem;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 0.3rem;
+}
+
+#classes tr:nth-of-type(even) {
+    background-color: white;
+}
+
+img {
+    align-items: center;
+}
+
+/* Nyhetsbrev */
+#newsletter ul {
+    list-style-type: none;
+    list-style-position: inside;
+    line-height: 1.5;
+    margin-left: 2rem;
+    padding-left: 2rem;
+}
+
+/* Footer */
+footer p {
+    background-color: white;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    /* Ta bort understrykning vid hovring. */
+}
+
+/* Copyright */
+#copyright {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+#copyright ul li {
+    border-left: solid 2px #996300;
+    display: inline-block;
+}
